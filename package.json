@@ -1,0 +1,41 @@
+{
+  "name": "chatgpt-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:mac": "electron-builder --mac",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "chatgpt.custom.app",
+    "productName": "ChatGPT on Desktop",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "main.js",
+      "assets/**/*"
+    ],
+    "mac": {
+      "icon": "assets/app-icon.icns"
+    },
+    "win": {
+      "icon": "assets/app-icon.ico"
+    },
+    "linux": {
+      "icon": "assets/app-icon.png"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^24.0.0",
+    "electron-builder": "^23.6.0"
+  }
+}
